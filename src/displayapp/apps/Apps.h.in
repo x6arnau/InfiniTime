@@ -18,17 +18,11 @@ namespace Pinetime {
       FlashLight,
       BatteryInfo,
       Music,
-      Paint,
-      Paddle,
-      Twos,
       HeartRate,
       Navigation,
       StopWatch,
-      Metronome,
       Motion,
-      Calculator,
       Steps,
-      Dice,
       Weather,
       PassKey,
       QuickSettings,
@@ -58,6 +52,7 @@ namespace Pinetime {
       Numerals,
       PrideFlag,
       Legend,
+      CasioAE1200,
     };
 
     template <Apps>

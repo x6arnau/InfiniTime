@@ -3,9 +3,7 @@
 #include "Controllers.h"
 
 #include "displayapp/screens/Alarm.h"
-#include "displayapp/screens/Dice.h"
 #include "displayapp/screens/Timer.h"
-#include "displayapp/screens/Twos.h"
 #include "displayapp/screens/Tile.h"
 #include "displayapp/screens/ApplicationList.h"
 #include "displayapp/screens/WatchFaceDigital.h"
@@ -17,6 +15,7 @@
 #include "displayapp/screens/WatchFaceNumerals.h"
 #include "displayapp/screens/WatchFacePrideFlag.h"
 #include "displayapp/screens/WatchFaceLegend.h"
+#include "displayapp/screens/WatchFaceCasioAE1200.h"
 
 namespace Pinetime {
   namespace Applications {
