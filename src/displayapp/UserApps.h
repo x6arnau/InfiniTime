@@ -13,6 +13,7 @@
 #include "displayapp/screens/WatchFaceTerminal.h"
 #include "displayapp/screens/WatchFaceNumerals.h"
 #include "displayapp/screens/WatchFaceLegend.h"
+#include "displayapp/screens/WatchFaceRetro.h"
 
 namespace Pinetime {
   namespace Applications {

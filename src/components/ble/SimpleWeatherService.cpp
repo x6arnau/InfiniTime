@@ -220,12 +220,12 @@ bool SimpleWeatherService::IsNight() const {
 
 bool SimpleWeatherService::CurrentWeather::operator==(const SimpleWeatherService::CurrentWeather& other) const {
   return this->iconId == other.iconId && this->temperature == other.temperature && this->timestamp == other.timestamp &&
-         this->maxTemperature == other.maxTemperature && this->minTemperature == other.maxTemperature &&
+         this->maxTemperature == other.maxTemperature && this->minTemperature == other.minTemperature &&
          std::strcmp(this->location.data(), other.location.data()) == 0 && this->sunrise == other.sunrise && this->sunset == other.sunset;
 }
 
 bool SimpleWeatherService::Forecast::Day::operator==(const SimpleWeatherService::Forecast::Day& other) const {
-  return this->iconId == other.iconId && this->maxTemperature == other.maxTemperature && this->minTemperature == other.maxTemperature;
+  return this->iconId == other.iconId && this->maxTemperature == other.maxTemperature && this->minTemperature == other.minTemperature;
 }
 
 bool SimpleWeatherService::Forecast::operator==(const SimpleWeatherService::Forecast& other) const {

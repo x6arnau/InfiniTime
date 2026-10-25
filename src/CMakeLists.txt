@@ -357,6 +357,7 @@ set(LVGL_SRC
 
 list(APPEND IMAGE_FILES
         displayapp/icons/battery/batteryicon.c
+        displayapp/icons/retro/retro_icons.c
         )
 list(APPEND SOURCE_FILES
         stdlib.c
@@ -423,6 +424,7 @@ list(APPEND SOURCE_FILES
         displayapp/screens/WatchFaceCasioStyleG7710.cpp
         displayapp/screens/WatchFaceNumerals.cpp
         displayapp/screens/WatchFaceLegend.cpp
+        displayapp/screens/WatchFaceRetro.cpp
 
         ##
 
