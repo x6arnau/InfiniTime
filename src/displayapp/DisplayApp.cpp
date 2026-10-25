@@ -3,6 +3,7 @@
 #include "displayapp/screens/HeartRate.h"
 #include "displayapp/screens/Motion.h"
 #include "displayapp/screens/Timer.h"
+#include "displayapp/screens/Pomodoro.h"
 #include "displayapp/screens/Alarm.h"
 #include "components/battery/BatteryController.h"
 #include "components/ble/BleController.h"
@@ -67,6 +68,11 @@ namespace {
     auto* dispApp = static_cast<DisplayApp*>(pvTimerGetTimerID(xTimer));
     dispApp->PushMessage(Display::Messages::TimerDone);
   }
+
+  void PomodoroCallback(TimerHandle_t xTimer) {
+    auto* dispApp = static_cast<DisplayApp*>(pvTimerGetTimerID(xTimer));
+    dispApp->PushMessage(Display::Messages::PomodoroPhaseDone);
+  }
 }
 
 DisplayApp::DisplayApp(Drivers::St7789& lcd,
@@ -105,6 +111,7 @@ DisplayApp::DisplayApp(Drivers::St7789& lcd,
     spiNorFlash {spiNorFlash},
     lvgl {lcd, filesystem},
     timer(this, TimerCallback),
+    pomodoroController(this, PomodoroCallback),
     controllers {batteryController,
                  bleController,
                  dateTimeController,
@@ -119,6 +126,7 @@ DisplayApp::DisplayApp(Drivers::St7789& lcd,
                  nullptr,
                  filesystem,
                  timer,
+                 pomodoroController,
                  nullptr,
                  this,
                  lvgl,
@@ -378,6 +386,19 @@ void DisplayApp::Refresh() {
           auto* timerScreen = static_cast<Screens::Timer*>(currentScreen.get());
           timerScreen->SetTimerRinging();
         }
+        break;
+      }
+      case Messages::PomodoroPhaseDone: {
+        // Chain the next phase first, so that the timing does not depend on how long the screen takes to load
+        pomodoroController.AdvancePhase();
+        if (state != States::Running) {
+          PushMessageToSystemTask(System::Messages::GoToRunning);
+        }
+        lv_disp_trig_activity(nullptr);
+        if (currentApp != Apps::Pomodoro) {
+          LoadNewScreen(Apps::Pomodoro, DisplayApp::FullRefreshDirections::Up);
+        }
+        static_cast<Screens::Pomodoro*>(currentScreen.get())->NotifyPhaseChange();
         break;
       }
       case Messages::AlarmTriggered:

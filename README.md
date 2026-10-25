@@ -27,8 +27,7 @@
 - [About the firmware and bootloader](doc/gettingStarted/about-software.md)
 - [Available apps](doc/gettingStarted/Applications.md)
 - [Available watch faces](/doc/gettingStarted/Watchfaces.md)
-- [PineTimeStyle Watch face](https://pine64.org/documentation/PineTime/Watchfaces/PineTimeStyle)
-  - [Weather integration](https://pine64.org/documentation/PineTime/Software/InfiniTime_weather/)
+- [Weather integration](https://pine64.org/documentation/PineTime/Software/InfiniTime_weather/)
 
 ### Companion apps
 

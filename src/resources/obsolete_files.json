@@ -2,5 +2,17 @@
   {
     "path": "/example-of-obsolete-file.bin",
     "since": "1.11.0"
+  },
+  {
+    "path": "/fonts/teko.bin",
+    "since": "1.16.0"
+  },
+  {
+    "path": "/fonts/bebas.bin",
+    "since": "1.16.0"
+  },
+  {
+    "path": "/images/pine_small.bin",
+    "since": "1.16.0"
   }
 ]

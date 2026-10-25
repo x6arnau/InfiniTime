@@ -387,12 +387,12 @@ list(APPEND SOURCE_FILES
         displayapp/screens/BatteryInfo.cpp
         displayapp/screens/Steps.cpp
         displayapp/screens/Timer.cpp
+        displayapp/screens/Pomodoro.cpp
         displayapp/screens/PassKey.cpp
         displayapp/screens/Error.cpp
         displayapp/screens/Alarm.cpp
         displayapp/screens/Styles.cpp
         displayapp/screens/WeatherSymbols.cpp
-        displayapp/Colors.cpp
         displayapp/widgets/Counter.cpp
         displayapp/widgets/PageIndicator.cpp
         displayapp/widgets/DotIndicator.cpp
@@ -419,14 +419,10 @@ list(APPEND SOURCE_FILES
         ## Watch faces
         displayapp/screens/WatchFaceAnalog.cpp
         displayapp/screens/WatchFaceDigital.cpp
-        displayapp/screens/WatchFaceInfineat.cpp
         displayapp/screens/WatchFaceTerminal.cpp
-        displayapp/screens/WatchFacePineTimeStyle.cpp
         displayapp/screens/WatchFaceCasioStyleG7710.cpp
         displayapp/screens/WatchFaceNumerals.cpp
-        displayapp/screens/WatchFacePrideFlag.cpp
         displayapp/screens/WatchFaceLegend.cpp
-        displayapp/screens/WatchFaceCasioAE1200.cpp
 
         ##
 
@@ -467,6 +463,7 @@ list(APPEND SOURCE_FILES
         components/motor/MotorController.cpp
         components/settings/Settings.cpp
         components/timer/Timer.cpp
+        components/pomodoro/PomodoroController.cpp
         components/stopwatch/StopWatchController.cpp
         components/alarm/AlarmController.cpp
         components/fs/FS.cpp
@@ -611,8 +608,8 @@ set(INCLUDE_FILES
         displayapp/screens/HeartRate.h
         displayapp/screens/Motion.h
         displayapp/screens/Timer.h
+        displayapp/screens/Pomodoro.h
         displayapp/screens/Alarm.h
-        displayapp/Colors.h
         displayapp/widgets/Counter.h
         displayapp/widgets/PageIndicator.h
         displayapp/widgets/DotIndicator.h
@@ -653,6 +650,7 @@ set(INCLUDE_FILES
         components/ble/SimpleWeatherService.h
         components/settings/Settings.h
         components/timer/Timer.h
+        components/pomodoro/PomodoroController.h
         components/stopwatch/StopWatchController.h
         components/alarm/AlarmController.h
         drivers/Cst816s.h

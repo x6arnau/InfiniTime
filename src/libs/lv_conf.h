@@ -227,7 +227,7 @@ typedef void * lv_fs_drv_user_data_t;
 #define LV_IMG_CF_INDEXED       1
 
 /* 1: Enable alpha indexed images */
-#define LV_IMG_CF_ALPHA         1
+#define LV_IMG_CF_ALPHA         0
 
 /* Default image cache size. Image caching keeps the images opened.
  * If only the built-in image formats are used there is no real advantage of caching.
@@ -419,10 +419,7 @@ typedef void* lv_indev_drv_user_data_t;            /*Type of user data in the in
                                LV_FONT_DECLARE(jetbrains_mono_76) \
                                LV_FONT_DECLARE(open_sans_light) \
                                LV_FONT_DECLARE(fontawesome_weathericons) \
-                               LV_FONT_DECLARE(lv_font_sys_48) \
-                               LV_FONT_DECLARE(lcd_segment_bold_40) \
-                               LV_FONT_DECLARE(lcd_segment_bold_18) \
-                               LV_FONT_DECLARE(lcd_segment_16)
+                               LV_FONT_DECLARE(lv_font_sys_48)
 
 /* Enable it if you have fonts with a lot of characters.
  * The limit depends on the font size, font face and bpp

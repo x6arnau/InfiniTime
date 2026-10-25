@@ -36,6 +36,8 @@ namespace Pinetime {
         static constexpr const char* eye = "\xEF\x81\xAE";
         static constexpr const char* home = "\xEF\x80\x95";
         static constexpr const char* sleep = "\xEE\xBD\x84";
+        // Tomato.ttf (U+E000), merged into jetbrains_mono_bold_20 for the Pomodoro launcher icon
+        static constexpr const char* tomato = "\xEE\x80\x80";
 
         // fontawesome_weathericons.c
         // static constexpr const char* sun = "\xEF\x86\x85";

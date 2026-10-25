@@ -1,28 +1,4 @@
 {
-   "teko" : {
-      "sources": [
-         {
-            "file": "fonts/Teko-Light.ttf",
-            "symbols": "0123456789:/APMonTueWdhFriSat "
-         }
-      ],
-      "bpp": 1,
-      "size": 28,
-      "format": "bin",
-      "target_path": "/fonts/"
-   },
-   "bebas" : {
-      "sources": [
-         {
-            "file": "fonts/BebasNeue-Regular.ttf",
-            "symbols": "0123456789:"
-         }
-      ],
-      "bpp": 1,
-      "size": 120,
-      "format": "bin",
-      "target_path": "/fonts/"
-   },
    "lv_font_dots_40": {
       "sources": [
          {
